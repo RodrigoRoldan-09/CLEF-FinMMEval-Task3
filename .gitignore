@@ -10,8 +10,7 @@ mio/data/final/*.pt
 mio/data/raw_features/
 mio/data/feature_analysis/
 
-# SQLite local (va al disco persistente de Render)
-mio/data/state.db
+# SQLite WAL temp files (state.db SÍ se sube para que Render lo copie al disco persistente)
 mio/data/state.db-shm
 mio/data/state.db-wal
 
