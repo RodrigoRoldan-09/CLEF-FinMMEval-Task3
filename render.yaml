@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: finmmeval-task3
+    runtime: python
+    plan: standard
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m serving.api --host 0.0.0.0 --port $PORT --no-rationale
+    rootDir: mio
+    envVars:
+      - key: CHECKPOINT_PATH
+        value: checkpoints/best_swa.pt
+      - key: RATIONALE_ENABLED
+        value: "0"
+      - key: STATE_DB
+        value: /data/state.db
+      - key: TRANSFORMERS_CACHE
+        value: /tmp/hf_cache
+      - key: HF_HUB_DISABLE_SYMLINKS_WARNING
+        value: "1"
+    disk:
+      name: state-db
+      mountPath: /data
+      sizeGB: 1

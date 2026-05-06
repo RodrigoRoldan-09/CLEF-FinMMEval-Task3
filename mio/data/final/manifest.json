@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "n_scalar_features": 19,
+  "scalar_features": [
+    "btc_return_1d",
+    "mkt_proxy_return_1d",
+    "days_since_10q",
+    "day_of_month",
+    "price_slope_20d",
+    "dow_4",
+    "return_5d",
+    "dow_1",
+    "dow_2",
+    "vol_of_vol",
+    "dist_from_max",
+    "gap_overnight_proxy",
+    "ema_26",
+    "rsi_14",
+    "realized_vol_5d",
+    "macd_hist",
+    "realized_vol_20d",
+    "has_news",
+    "log_news_count"
+  ],
+  "seq_len": 30,
+  "max_news_per_day": 8,
+  "finbert_dim": 768,
+  "finbert_model": "yiyanghkust/finbert-tone",
+  "n_symbols": 12,
+  "symbols": [
+    "AAPL",
+    "ADBE",
+    "AMZN",
+    "BMRN",
+    "BTC",
+    "ETH",
+    "GOOGL",
+    "META",
+    "MRNA",
+    "MSFT",
+    "NVDA",
+    "TSLA"
+  ],
+  "splits": {
+    "train": 1588,
+    "val": 360,
+    "test": 496
+  },
+  "class_distribution": {
+    "train": {
+      "0": 524,
+      "1": 529,
+      "2": 535
+    },
+    "val": {
+      "0": 137,
+      "1": 110,
+      "2": 113
+    },
+    "test": {
+      "0": 176,
+      "1": 156,
+      "2": 164
+    }
+  }
+}

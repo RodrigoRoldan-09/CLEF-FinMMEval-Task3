@@ -1,0 +1,20 @@
+# Dependencias y cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+
+# Tensores de entrenamiento (grandes, no necesarios en producción)
+mio/data/final/*.pt
+mio/data/raw_features/
+mio/data/feature_analysis/
+
+# SQLite local (va al disco persistente de Render)
+mio/data/state.db
+mio/data/state.db-shm
+mio/data/state.db-wal
+
+# Backups
+mio/backup/
+mio/backups/
